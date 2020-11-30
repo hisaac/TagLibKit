@@ -1,0 +1,6 @@
+[submodule "modules/taglib"]
+	path = modules/taglib
+	url = https://github.com/taglib/taglib.git
+[submodule "modules/TaglibWrapper"]
+	path = modules/TaglibWrapper
+	url = https://github.com/ryanfrancesconi/TaglibWrapper.git

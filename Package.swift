@@ -13,40 +13,14 @@ let package = Package(
 	targets: [
 		.target(
 			name: "TagLibKit",
-			dependencies: ["TagLib"],
-			path: "Sources/TaglibWrapper",
-			exclude: ["README.md"],
-			publicHeadersPath: nil
+			dependencies: ["TagLib"]
 		),
 		.target(
 			name: "TagLib",
 			dependencies: [],
-			path: "Sources/taglib/taglib",
-			exclude: [
-				"cmake_install.cmake",
-				"CMakeLists.txt",
-				"libtag.a",
-				"Makefile",
-				"taglib_config.h.cmake",
-				"ape/ape-tag-format.txt",
-				"bin/",
-				"CMakeFiles/",
-				"include/taglib/tlist.tcc",
-				"include/taglib/tmap.tcc",
-				"lib/",
-				"mpeg/id3v2/id3v2.2.0.txt",
-				"mpeg/id3v2/id3v2.3.0.txt",
-				"mpeg/id3v2/id3v2.4.0-frames.txt",
-				"mpeg/id3v2/id3v2.4.0-structure.txt",
-				"toolkit/tlist.tcc",
-				"toolkit/tmap.tcc",
-			],
-			// To rebuild the public headers, from the root of the taglib repo, run:
-			//   cmake -DCMAKE_INSTALL_PREFIX=./taglib -DCMAKE_BUILD_TYPE=Release .
-			//   make
-			//   make install
+			path: "Sources/taglib",
 			cxxSettings: [
-				.headerSearchPath("../3rdparty"),
+				.headerSearchPath("3rdparty"),
 				.headerSearchPath("include/taglib"),
 				.headerSearchPath(""),
 				.headerSearchPath("ape"),
