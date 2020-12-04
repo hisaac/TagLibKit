@@ -39,14 +39,14 @@ build: submodule_init
 		-output Frameworks/tag.xcframework
 
 	@echo "Moving TaglibWrapper files"
-	mkdir -p Sources/TagLibKit
-	cp modules/TaglibWrapper/*.mm Sources/TagLibKit
-	mkdir -p Sources/TagLibKit/include
-	cp modules/TaglibWrapper/*.h Sources/TagLibKit/include
+	mkdir -p Sources/TaglibWrapper
+	cp modules/TaglibWrapper/*.mm Sources/TaglibWrapper
+	mkdir -p Sources/TaglibWrapper/include
+	cp modules/TaglibWrapper/*.h Sources/TaglibWrapper/include
 
 clean:
 	@echo "Cleaning up"
 	git submodule deinit -f modules/taglib
 	git submodule deinit -f modules/TaglibWrapper
-	rm -rf .build/taglib Frameworks Sources
-	mkdir Frameworks Sources
+	rm -rf .build/taglib Frameworks Sources/TaglibWrapper
+	mkdir Frameworks Sources/TaglibWrapper

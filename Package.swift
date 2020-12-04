@@ -13,6 +13,10 @@ let package = Package(
 	targets: [
 		.target(
 			name: "TagLibKit",
+			dependencies: ["TaglibWrapper"]
+		),
+		.target(
+			name: "TaglibWrapper",
 			dependencies: ["TagLib"]
 		),
 		.binaryTarget(
