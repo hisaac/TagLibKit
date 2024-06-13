@@ -1,3 +1,8 @@
+> [!WARNING]
+> This package is not under active development, and is only left here as reference material. It is not in a usable state.
+
+---
+
 # TagLibKit
 
 TagLibKit is meant to be a drop-in implementation of [TagLib](https://taglib.org) for using Swift/Objective-C projects.
